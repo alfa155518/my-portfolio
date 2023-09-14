@@ -224,6 +224,7 @@ navigatingBullet.forEach((bullet) => {
   });
 });
 
+
 // Start disable Inspect
 window.addEventListener("contextmenu", (e) => {
   e.preventDefault();
