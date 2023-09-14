@@ -224,8 +224,8 @@ navigatingBullet.forEach((bullet) => {
   });
 });
 
-// Start disable Inspect
-// window.addEventListener("contextmenu", (e) => {
-//   e.preventDefault();
-//   alert("Don't be one of those who copy and paste");
-// });
+Start disable Inspect
+window.addEventListener("contextmenu", (e) => {
+  e.preventDefault();
+  alert("Don't be one of those who copy and paste");
+});

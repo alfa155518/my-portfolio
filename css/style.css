@@ -127,8 +127,6 @@ nav {
     z-index: 5;
     position: relative;
 }
-nav .logo {
-}
 nav .logo h1 {
     color: var(--bs-indigo);
     cursor: pointer;
