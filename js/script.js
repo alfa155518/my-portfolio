@@ -11,7 +11,6 @@ window.addEventListener("load", () => {
 // Start NavBar
 
 let navLinks = document.querySelector("nav .links");
-
 let allBars = document.querySelectorAll(".bars ul li");
 
 let firstBar = document.querySelector(".bars ul li:nth-child(1)");
@@ -226,7 +225,7 @@ navigatingBullet.forEach((bullet) => {
 });
 
 // Start disable Inspect
-window.addEventListener("contextmenu", (e) => {
-  e.preventDefault();
-  alert("Don't be one of those who copy and paste");
-});
+// window.addEventListener("contextmenu", (e) => {
+//   e.preventDefault();
+//   alert("Don't be one of those who copy and paste");
+// });
