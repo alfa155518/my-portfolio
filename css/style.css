@@ -175,7 +175,6 @@ nav .btn-contact {
 }
 nav .btn-contact a {
     color: #FFF;
-    font-family: cursive;
 }
 .bars {
     padding: 5px;
@@ -582,7 +581,7 @@ nav .btn-contact a {
 .recent-work h2 {
     text-align: center;
     margin: 20px 0;
-    color: var(--second-color);
+    color: var(--bs-indigo);
     padding: 10px;
     font-size: 30px;
     font-weight: bold;
@@ -728,7 +727,7 @@ nav .btn-contact a {
 .services h2 {
     text-align: center;
     margin: 20px 0;
-    color: var(--second-color);
+    color: var(--bs-indigo);
     padding: 10px;
     font-size: 30px;
     font-weight: bold;
@@ -819,7 +818,7 @@ nav .btn-contact a {
 .skills-section h2 {
     text-align: center;
     margin: 20px 0;
-    color: var(--second-color);
+    color: var(--bs-indigo);
     padding: 10px;
     font-size: 30px;
     font-weight: bold;
