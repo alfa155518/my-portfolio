@@ -40,22 +40,6 @@ var typed = new Typed(".my-name", {
   loop: true,
   cursorChar: ""
 });
-
-
-// Start Typed My Name on Mobile
-var typed = new Typed(".my-name-mobile", {
-  strings: [
-    ,
-    "I'm Ahmed Hassop",
-    "I'm Front End Web Developer",
-    "And Video Editor"
-  ],
-  typeSpeed: 80,
-  backSpeed: 70,
-  loop: true,
-  cursorChar: ""
-});
-
 // Start Time Line
 
 const timeLineLinks = document.querySelectorAll(".timeline-links li");

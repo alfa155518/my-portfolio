@@ -248,18 +248,7 @@ nav .btn-contact a {
 /* End Nav */
 
 /* Canvas Element */
-.canvas-mobile {
-    display: none;
-}
-.canvas-mobile-1 {
-    position: relative;
-    top: -140px;
-    left: 0;
-    width: 100%;
-    height: 30%;
-    padding: 10px 0;
-    z-index: -1;
-}
+
 #particles-js{
     position: relative;
     height: 100%;
@@ -277,8 +266,7 @@ nav .btn-contact a {
     top: 300px;
     text-align: center;
 }
-.landing .info small,
-.landing-mobile .info small {
+.landing .info small {
     padding: 10px;
     margin: 10px;
     display: block;
@@ -286,16 +274,14 @@ nav .btn-contact a {
     font-size: 30px;
     text-align: center;
 }
-.landing .info h2,
-.landing-mobile .info h2 {
+.landing .info h2 {
     padding: 0 0 7px 0;
     color:  var(--bs-indigo);
     font-weight: bold;
     font-size: 32px;
 }
 
-.btn-s,
-.landing-mobile .btn-s {
+.btn-s {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -306,8 +292,7 @@ nav .btn-contact a {
     position: relative;
     margin: 30px 0 30px 0px;
 }
-.btn-s a,
-.landing-mobile .btn-s a {
+.btn-s a {
     background-color: var(--img-bg);
     color: #FFF;
     padding: 10px;
@@ -335,8 +320,7 @@ nav .btn-contact a {
     nav .links li::before{        
         display: none;
     }
-    .btn-s,
-    .landing-mobile .btn-s {
+    .btn-s {
         display: none;
     }
     .bars {
@@ -355,13 +339,6 @@ nav .btn-contact a {
     }
     .bars {
         top: -3px;
-    }
-    .canvas-mobile {
-        display: block;
-    }
-    .particles-js {
-        position: absolute;
-        top: -100%;
     }
 }
 @media (max-width:300px) {
