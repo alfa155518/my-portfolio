@@ -68,12 +68,12 @@ body {
 .navigation-bullets {
     position: fixed;
     z-index: 1000;
-    right: -15px;
+    right: -7px;
     top: 50%;
     transform: translateY(-50%);
     width: 50px;
     display: none;
-    
+    overflow: hidden;
 }
 .navigation-bullets .bullet {
     width: 22px;
@@ -248,6 +248,18 @@ nav .btn-contact a {
 /* End Nav */
 
 /* Canvas Element */
+.canvas-mobile {
+    display: none;
+}
+.canvas-mobile-1 {
+    position: relative;
+    top: -140px;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    padding: 10px 0;
+    z-index: -1;
+}
 #particles-js{
     position: relative;
     height: 100%;
@@ -255,12 +267,18 @@ nav .btn-contact a {
     top: 0;
 }
 /* Start Landing */
-.landing {
+.landing-mobile {
     position: relative;
-    top: 231px;
+    top: 300px;
     text-align: center;
 }
-.landing .info small {
+.landing {
+    position: relative;
+    top: 300px;
+    text-align: center;
+}
+.landing .info small,
+.landing-mobile .info small {
     padding: 10px;
     margin: 10px;
     display: block;
@@ -268,14 +286,16 @@ nav .btn-contact a {
     font-size: 30px;
     text-align: center;
 }
-.landing .info h2 {
+.landing .info h2,
+.landing-mobile .info h2 {
     padding: 0 0 7px 0;
     color:  var(--bs-indigo);
     font-weight: bold;
     font-size: 32px;
 }
 
-.btn-s {
+.btn-s,
+.landing-mobile .btn-s {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -286,7 +306,8 @@ nav .btn-contact a {
     position: relative;
     margin: 30px 0 30px 0px;
 }
-.btn-s a {
+.btn-s a,
+.landing-mobile .btn-s a {
     background-color: var(--img-bg);
     color: #FFF;
     padding: 10px;
@@ -314,7 +335,8 @@ nav .btn-contact a {
     nav .links li::before{        
         display: none;
     }
-    .btn-s {
+    .btn-s,
+    .landing-mobile .btn-s {
         display: none;
     }
     .bars {
@@ -333,6 +355,13 @@ nav .btn-contact a {
     }
     .bars {
         top: -3px;
+    }
+    .canvas-mobile {
+        display: block;
+    }
+    .particles-js {
+        position: absolute;
+        top: -100%;
     }
 }
 @media (max-width:300px) {
@@ -382,13 +411,13 @@ nav .btn-contact a {
 }
 
 .about .my-img video {
-    width: 400px;
+    width: 300px;
     padding: 9px;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 .about .info{
     flex: 2;
@@ -448,11 +477,15 @@ nav .btn-contact a {
         text-align: center;
     }
     .about .skills ul {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(100px,1fr));
+        gap: 20px;
+        text-align: center;
+        place-items:center ;
     }
-
+    .about .skills ul li {
+        width: max-content;
+    }
 }
 /* End Media About Section  */
 

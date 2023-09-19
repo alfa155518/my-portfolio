@@ -41,6 +41,21 @@ var typed = new Typed(".my-name", {
   cursorChar: ""
 });
 
+
+// Start Typed My Name on Mobile
+var typed = new Typed(".my-name-mobile", {
+  strings: [
+    ,
+    "I'm Ahmed Hassop",
+    "I'm Front End Web Developer",
+    "And Video Editor"
+  ],
+  typeSpeed: 80,
+  backSpeed: 70,
+  loop: true,
+  cursorChar: ""
+});
+
 // Start Time Line
 
 const timeLineLinks = document.querySelectorAll(".timeline-links li");
@@ -226,7 +241,7 @@ navigatingBullet.forEach((bullet) => {
 
 
 // Start disable Inspect
-window.addEventListener("contextmenu", (e) => {
-  e.preventDefault();
-  alert("Don't be one of those who copy and paste");
-});
+// window.addEventListener("contextmenu", (e) => {
+//   e.preventDefault();
+//   alert("Don't be one of those who copy and paste");
+// });
