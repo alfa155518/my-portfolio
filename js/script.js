@@ -27,6 +27,21 @@ allBars.forEach((bar) => {
   });
 });
 
+
+// Remove Class Active List From Nav Links 
+const allLiLinks = document.querySelectorAll('nav .links li')
+
+allLiLinks.forEach((li) => {
+  li.addEventListener("click", e => {
+    if (navLinks.classList.contains('active-list')) {
+      secondBar.classList.remove("hide");
+      firstBar.classList.remove("change-1");
+      lastBar.classList.remove("change-2");
+      navLinks.classList.remove('active-list')
+    }
+  })
+})
+
 // Start Typed My Name
 var typed = new Typed(".my-name", {
   strings: [
@@ -163,27 +178,6 @@ allServices.forEach((services) => {
   observerServices.observe(services);
 });
 
-// Start My-Skills Progress
-
-const progressSection = document.querySelector(".skills-section");
-
-let progressBar = document.querySelectorAll(
-  ".progress-content .progress .progress-bar"
-);
-
-window.onscroll = function () {
-  if (window.scrollY >= progressSection.offsetTop) {
-    progressBar.forEach((progress) => {
-      progress.style.width = progress.dataset.width;
-    });
-  } else {
-    progressBar.forEach((progress) => {
-      progress.style.width = "0";
-    });
-  }
-};
-
-// End My-Skills Progress
 
 // Start Scroll-To-Top
 const btnScrollTop = document.querySelector(".scroll-top");

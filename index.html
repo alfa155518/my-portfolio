@@ -9,9 +9,12 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,300;1,400;1,800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js" integrity="sha512-tQQXRDB2wEmuJGtFrmmoFYzNTq8StA1XJrfO0OQbbTxd9G0CwaTDL6/C1y805IlvBVrMwOqob1kf6r/2U5XXVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js"          integrity="sha512-tQQXRDB2wEmuJGtFrmmoFYzNTq8StA1XJrfO0OQbbTxd9G0CwaTDL6/C1y805IlvBVrMwOqob1kf6r/2U5XXVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
+        <link rel="stylesheet" href="css/all.min.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
@@ -330,7 +333,7 @@
         <!-- End Recent Work -->
 
         <!-- Start Services -->
-        <section class="services mx-5" id="services">
+        <section class="services" id="services">
             <h2>
             Services
             <span><i class="fa-solid fa-angles-down fa-bounce"></i></span>
@@ -338,7 +341,7 @@
 
             <div class="boxes">
             <div class="box">
-                <i class="fa-solid fa-desktop"></i>
+                <i class="fa-solid fa-laptop-code"></i>
                 <h2>Web Design</h2>
                 <p>
                 I Will Design Your Personal Website Or Your Company Website With
@@ -402,66 +405,46 @@
             My-Skills
             <span><i class="fa-solid fa-angles-down fa-bounce"></i></span>
             </h2>
-            <div class="web-design">
-            <h3>Web design</h3>
-
-            <div class="progress-content">
-                <span>HTML</span>
-                <div class="progress">
-                <div class="progress-bar" data-width="95%">95%</div>
-                </div>
-            </div>
-
-            <div class="progress-content">
-                <span>CSS</span>
-                <div class="progress">
-                <div class="progress-bar" data-width="90%">90%</div>
-                </div>
-            </div>
-            <div class="progress-content">
-                <span>JAVASCRIPT</span>
-                <div class="progress">
-                <div class="progress-bar" data-width="85%">90%</div>
-                </div>
-            </div>
-            <div class="progress-content">
-                <span>React Js</span>
-                <div class="progress">
-                <div class="progress-bar" data-width="85%">95%</div>
-                </div>
-            </div>
-            <div class="progress-content">
-                <span>Bootstrap</span>
-                <div class="progress">
-                <div class="progress-bar" data-width="80%">80%</div>
-                </div>
-            </div>
-            <div class="progress-content">
-                <span>Tailwind</span>
-                <div class="progress">
-                <div class="progress-bar" data-width="90%">90%</div>
-                </div>
-            </div>
-            </div>
-            <div class="video-edit">
-            <h3>Video Editing</h3>
-            <div class="progress-content">
-                <span>Adobe Premier</span>
-                <div class="progress">
-                <div class="progress-bar" data-width="80%">80%</div>
-                </div>
-            </div>
-            <div class="progress-content">
-                <span>Camtasia</span>
-                <div class="progress">
-                <div class="progress-bar" data-width="90%">90%</div>
-                </div>
-            </div>
-            </div>
-        </div>
-        </section>
+            <swiper-container class="mySwiper" loop="true" effect="coverflow" grab-cursor="true" centered-slides="true"
+            slides-per-view="auto" coverflow-effect-rotate="50" coverflow-effect-stretch="0" coverflow-effect-depth="100"
+            coverflow-effect-modifier="1" coverflow-effect-slide-shadows="true">
+                <swiper-slide class="swiper-content">
+                <img src="img/portfolio/html.png" />
+                </swiper-slide>
+                <swiper-slide class="swiper-content">
+                <img src="img/portfolio/CSS3.png" />
+                </swiper-slide>
+                <swiper-slide class="swiper-content">
+                <img src="img/portfolio/javascript.png" />
+                </swiper-slide>
+                <swiper-slide class="swiper-content">
+                <img src="img/portfolio/Typescript.png" />
+                </swiper-slide>
+                <swiper-slide class="swiper-content">
+                <img src="img/portfolio/React.png" />
+                </swiper-slide>
+                <swiper-slide class="swiper-content">
+                <img src="img/portfolio/git.png" />
+                </swiper-slide>
+                <swiper-slide class="swiper-content">
+                <img src="img/portfolio/GitHub.svg" />
+                </swiper-slide>
+                <swiper-slide class="swiper-content">
+                <img src="img/portfolio/Premiere-pro.png" />
+                </swiper-slide>
+                <swiper-slide class="swiper-content">
+                <img src="img/portfolio/camtasia.jpeg" />
+                </swiper-slide>
+                <swiper-slide class="swiper-content">
+                <img src="img/portfolio/tailwind.png" />
+                </swiper-slide>
+                <swiper-slide class="swiper-content">
+                <img src="img/portfolio/Bootstrap.png" />
+                </swiper-slide>
+                
+            </swiper-container>
+            </section>
         <!-- End Skills -->
-
         <!-- Start Footer -->
         <footer class="text-center">
         <canvas id="canvas"></canvas>
@@ -495,9 +478,9 @@
         <i class="fa-solid fa-angles-up fa-bounce"></i>
         </div>
         <!-- End Arrow Scroll To Top -->
-        <script src="js/bootstrap.bundle.min.js"></script>
         <script src="js/canvas-footer.js"></script>
         <script src="js/canvas.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
         <script src="js/script.js"></script>
         
     </body>
