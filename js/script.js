@@ -1,12 +1,12 @@
-// const spinnerLoader = document.querySelector(".spinner-container");
+const spinnerLoader = document.querySelector(".spinner-container");
 
-// window.addEventListener("load", () => {
-//   spinnerLoader.style.display = "block";
+window.addEventListener("load", () => {
+  spinnerLoader.style.display = "block";
 
-//   setTimeout(() => {
-//     spinnerLoader.style.display = "none";
-//   }, 2000);
-// });
+  setTimeout(() => {
+    spinnerLoader.style.display = "none";
+  }, 2000);
+});
 
 // Start NavBar
 
