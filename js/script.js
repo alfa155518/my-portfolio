@@ -27,20 +27,19 @@ allBars.forEach((bar) => {
   });
 });
 
-
-// Remove Class Active List From Nav Links 
-const allLiLinks = document.querySelectorAll('nav .links li')
+// Remove Class Active List From Nav Links
+const allLiLinks = document.querySelectorAll("nav .links li");
 
 allLiLinks.forEach((li) => {
-  li.addEventListener("click", e => {
-    if (navLinks.classList.contains('active-list')) {
+  li.addEventListener("click", (e) => {
+    if (navLinks.classList.contains("active-list")) {
       secondBar.classList.remove("hide");
       firstBar.classList.remove("change-1");
       lastBar.classList.remove("change-2");
-      navLinks.classList.remove('active-list')
+      navLinks.classList.remove("active-list");
     }
-  })
-})
+  });
+});
 
 // Start Typed My Name
 var typed = new Typed(".my-name", {
@@ -48,12 +47,12 @@ var typed = new Typed(".my-name", {
     ,
     "I'm Ahmed Hassop",
     "I'm Front End Web Developer",
-    "And Video Editor"
+    "And Video Editor",
   ],
   typeSpeed: 80,
   backSpeed: 70,
   loop: true,
-  cursorChar: ""
+  cursorChar: "",
 });
 // Start Time Line
 
@@ -85,7 +84,7 @@ const allTimeLineContent = document.querySelectorAll(".time-line .data-learn");
 const optionTimeLine = {
   root: null,
   threshold: "0",
-  rootMargin: "0px 0px -250px 0px"
+  rootMargin: "0px 0px -250px 0px",
 };
 
 const observerTimeLine = new IntersectionObserver(function (entries, observer) {
@@ -141,7 +140,7 @@ let allGalleryImg = document.querySelectorAll(".gallery .project img");
 const optionImg = {
   root: null,
   threshold: "0",
-  rootMargin: "0px 0px -50px 0px"
+  rootMargin: "0px 0px -50px 0px",
 };
 
 const observerImg = new IntersectionObserver(function (entries, observer) {
@@ -164,7 +163,7 @@ let allServices = document.querySelectorAll(".services .boxes .box");
 const optionService = {
   root: null,
   threshold: "0",
-  rootMargin: "0px 0px -300px 0px"
+  rootMargin: "0px 0px -300px 0px",
 };
 
 const observerServices = new IntersectionObserver(function (entries, observer) {
@@ -177,7 +176,6 @@ const observerServices = new IntersectionObserver(function (entries, observer) {
 allServices.forEach((services) => {
   observerServices.observe(services);
 });
-
 
 // Start Scroll-To-Top
 const btnScrollTop = document.querySelector(".scroll-top");
@@ -205,18 +203,17 @@ function showBulletsAndScrollTop() {
 btnScrollTop.addEventListener("click", (e) => {
   scrollTo({
     top: 0,
-    behavior: "smooth"
+    behavior: "smooth",
   });
 });
 
 navigatingBullet.forEach((bullet) => {
   bullet.addEventListener("click", (e) => {
     document.querySelector(e.target.dataset.section).scrollIntoView({
-      behavior: "smooth"
+      behavior: "smooth",
     });
   });
 });
-
 
 // Start disable Inspect
 window.addEventListener("contextmenu", (e) => {
