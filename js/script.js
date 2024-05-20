@@ -41,19 +41,6 @@ allLiLinks.forEach((li) => {
   });
 });
 
-// Start Typed My Name
-var typed = new Typed(".my-name", {
-  strings: [
-    ,
-    "I'm Ahmed Hassop",
-    "I'm Front End Web Developer",
-    "And Video Editor",
-  ],
-  typeSpeed: 80,
-  backSpeed: 70,
-  loop: true,
-  cursorChar: "",
-});
 // Start Time Line
 
 const timeLineLinks = document.querySelectorAll(".timeline-links li");
@@ -133,29 +120,6 @@ function showImg(e) {
   });
 }
 
-// Start Show Gallery Img
-
-let allGalleryImg = document.querySelectorAll(".gallery .project img");
-
-const optionImg = {
-  root: null,
-  threshold: "0",
-  rootMargin: "0px 0px -50px 0px",
-};
-
-const observerImg = new IntersectionObserver(function (entries, observer) {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      const img = entry.target;
-      img.setAttribute("src", img.getAttribute("data-src"));
-    }
-  });
-}, optionImg);
-allGalleryImg.forEach((img) => {
-  observerImg.observe(img);
-});
-// End Recent Work
-
 // Start Appear Services
 
 let allServices = document.querySelectorAll(".services .boxes .box");
@@ -175,44 +139,6 @@ const observerServices = new IntersectionObserver(function (entries, observer) {
 }, optionService);
 allServices.forEach((services) => {
   observerServices.observe(services);
-});
-
-// Start Scroll-To-Top
-const btnScrollTop = document.querySelector(".scroll-top");
-
-const aboutSection = document.querySelector(".about");
-
-const landingSection = document.querySelector(".landing");
-
-const navigatingBullets = document.querySelector(".navigation-bullets");
-const navigatingBullet = document.querySelectorAll(
-  ".navigation-bullets .bullet"
-);
-
-window.addEventListener("scroll", showBulletsAndScrollTop);
-
-function showBulletsAndScrollTop() {
-  window.scrollY >= aboutSection.offsetTop
-    ? (btnScrollTop.style.display = "block")
-    : (btnScrollTop.style.display = "none");
-  window.scrollY >= landingSection.offsetTop
-    ? (navigatingBullets.style.display = "block")
-    : (navigatingBullets.style.display = "none");
-}
-
-btnScrollTop.addEventListener("click", (e) => {
-  scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-});
-
-navigatingBullet.forEach((bullet) => {
-  bullet.addEventListener("click", (e) => {
-    document.querySelector(e.target.dataset.section).scrollIntoView({
-      behavior: "smooth",
-    });
-  });
 });
 
 // Start disable Inspect
