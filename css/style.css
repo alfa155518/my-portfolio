@@ -46,9 +46,10 @@ body {
   z-index: 9999999;
   width: 100%;
   height: 100%;
-  background-color: #311b929e;
+  /* background-color: #311b929e; */
+  background-color: rgb(0 0 0 / 70%);
 }
-.lds-dual-ring:after {
+/* .lds-dual-ring:after {
   position: absolute;
   content: " ";
   top: 50%;
@@ -68,6 +69,101 @@ body {
   100% {
     transform: rotate(360deg);
   }
+} */
+
+/* From Uiverse.io by mobinkakei */
+.wrapper {
+  width: 200px;
+  height: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #fff;
+  animation: circle7124 0.5s alternate infinite ease;
+}
+
+@keyframes circle7124 {
+  0% {
+    top: 60px;
+    height: 5px;
+    border-radius: 50px 50px 25px 25px;
+    transform: scaleX(1.7);
+  }
+
+  40% {
+    height: 20px;
+    border-radius: 50%;
+    transform: scaleX(1);
+  }
+
+  100% {
+    top: 0%;
+  }
+}
+
+.circle:nth-child(2) {
+  left: 45%;
+  animation-delay: 0.2s;
+}
+
+.circle:nth-child(3) {
+  left: auto;
+  right: 15%;
+  animation-delay: 0.3s;
+}
+
+.shadow {
+  width: 20px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: absolute;
+  top: 62px;
+  transform-origin: 50%;
+  z-index: -1;
+  left: 15%;
+  filter: blur(1px);
+  animation: shadow046 0.5s alternate infinite ease;
+}
+
+@keyframes shadow046 {
+  0% {
+    transform: scaleX(1.5);
+  }
+
+  40% {
+    transform: scaleX(1);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: scaleX(0.2);
+    opacity: 0.4;
+  }
+}
+
+.shadow:nth-child(4) {
+  left: 45%;
+  animation-delay: 0.2s;
+}
+
+.shadow:nth-child(5) {
+  left: auto;
+  right: 15%;
+  animation-delay: 0.3s;
 }
 
 /* End spinier-loader */
@@ -178,16 +274,48 @@ nav .links li:hover::before {
 nav .links li a {
   color: #fff;
 }
-nav .btn-contact {
-  background: var(--img-bg);
-  padding: 7px;
-  border-radius: 5px;
+
+.btn-contact {
+  position: relative;
+  overflow: hidden;
+  height: 3rem;
+  padding: 0 2rem;
+  border-radius: 1.5rem;
+  background: #3d3a4e;
+  background-size: 400%;
+  border: none;
   cursor: pointer;
-  margin-top: -15px;
 }
-nav .btn-contact a {
+
+.btn-contact:hover::before {
+  transform: scaleX(1);
+}
+
+.btn-content {
+  position: relative;
+  z-index: 1;
   color: #fff;
+  top: 29%;
 }
+
+.btn-contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  width: 100%;
+  height: inherit;
+  border-radius: inherit;
+  background: linear-gradient(
+    82.3deg,
+    rgba(150, 93, 233, 1) 10.8%,
+    rgba(99, 88, 238, 1) 94.3%
+  );
+  transition: all 0.475s;
+}
+
 .bars {
   padding: 5px;
   z-index: 999;
@@ -302,15 +430,53 @@ nav .btn-contact a {
   z-index: 4;
   position: relative;
   margin: 30px 0 30px 0px;
+  a {
+    --color: #560bad;
+    font-family: inherit;
+    display: inline-block;
+    width: 8em;
+    height: 2.6em;
+    line-height: 2.5em;
+    margin: 20px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border: 2px solid var(--color);
+    transition: color 0.5s;
+    z-index: 1;
+    font-size: 17px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: #fff;
+    user-select: none;
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      background: var(--color);
+      height: 150px;
+      width: 200px;
+      border-radius: 50%;
+    }
+    &:hover {
+      color: #fff;
+    }
+    &::before {
+      top: 100%;
+      left: 100%;
+      transition: all 0.7s;
+    }
+    &:hover::before {
+      top: -30px;
+      left: -30px;
+    }
+    &:active:before {
+      background: #3a0ca3;
+      transition: background 0s;
+    }
+  }
 }
-.btn-s a {
-  background-color: var(--img-bg);
-  color: #fff;
-  padding: 10px;
-  border-radius: 6px;
-  cursor: pointer;
-  user-select: none;
-}
+
 /* Start Media NavBar */
 @media (max-width: 992px) {
   nav .links {
@@ -904,37 +1070,108 @@ nav .btn-contact a {
   z-index: -1;
 }
 
-footer .links-footer {
+.links-footer {
+  font-family: "Poppins", sans-serif;
   position: relative;
   z-index: 2;
   text-align: center;
   display: flex;
   align-items: center;
   padding: 30px;
-  flex-wrap: wrap;
   justify-content: center;
+  @media (max-width: 300px) {
+    flex-direction: column;
+  }
+  .icon {
+    position: relative;
+    background: #fdfafa99;
+    border-radius: 50%;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #fff;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    &::before {
+      position: absolute;
+      content: "";
+      height: 8px;
+      width: 8px;
+      background: #fff;
+      bottom: -3px;
+      left: 50%;
+      transform: translate(-50%) rotate(45deg);
+      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+  }
 }
-footer .links-footer li {
-  padding: 10px;
-  margin: 0 7px;
-  font-size: 30px;
-  background: linear-gradient(42deg, var(--light-section), #100e0e);
-  border-radius: 50%;
-  line-height: 10px;
+
+.links-footer .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
-footer .links-footer li a {
+
+.links-footer .icon:hover span,
+.links-footer .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.links-footer .facebook:hover,
+.links-footer .facebook:hover .tooltip,
+.links-footer .facebook:hover .tooltip::before {
+  background: #1877f2;
   color: #fff;
 }
-footer span {
+
+.links-footer .linkedin:hover,
+.links-footer .linkedin:hover .tooltip,
+.links-footer .linkedin:hover .tooltip::before {
+  background: #1da1f2;
+  color: #fff;
+}
+
+.links-footer .github:hover,
+.links-footer .github:hover .tooltip,
+.links-footer .github:hover .tooltip::before {
+  background: #393637;
+  color: #fff;
+}
+
+.links-footer li:hover a {
+  color: #fff;
+}
+
+footer .copyright {
   text-align: center;
   color: #fff;
   display: block;
+  a {
+    color: var(--head-section-color);
+    font-size: 25px;
+    font-weight: bold;
+  }
 }
-footer span a {
-  color: var(--head-section-color);
-  font-size: 25px;
-  font-weight: bold;
-}
+
 /* End Footer */
 
 /* Start Media Footer Section  */
