@@ -1090,6 +1090,12 @@ nav {
   background: #393637;
   color: #fff;
 }
+.links-footer .youtube:hover,
+.links-footer .youtube:hover .tooltip,
+.links-footer .youtube:hover .tooltip::before {
+  background: #8c0000;
+  color: #fff;
+}
 
 .links-footer li:hover a {
   color: #fff;
